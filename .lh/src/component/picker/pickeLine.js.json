@@ -1,0 +1,118 @@
+{
+    "sourceFile": "src/component/picker/pickeLine.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 25,
+            "patches": [
+                {
+                    "date": 1737131644343,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1737131649595,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n-i\n\\ No newline at end of file\n+import Reac\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1737131655227,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,2 @@\n+import React from \"react\";\n+import \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1737131661351,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,2 @@\n+import React from \"react\";\n+import  \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1737131667312,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,2 @@\n+import React from \"react\";\n+import  {Picker} from \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1737131672528,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,2 @@\n import React from \"react\";\n-import  {Picker} from \n-import React from \"react\";\n-import  \n-import React from \"react\";\n-import \n-import Reac\n\\ No newline at end of file\n+import  {Picker} from '@'\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1737131680094,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,2 @@\n+import React from \"react\";\n+import  {Picker} from '@react-native-picker/picker';\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1737131686646,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,4 @@\n+import React from \"react\";\n+import  {Picker} from '@react-native-picker/picker';\n+\n+import defau\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1737131692850,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,4 @@\n import React from \"react\";\n import  {Picker} from '@react-native-picker/picker';\n \n-import defau\n\\ No newline at end of file\n+\n"
+                },
+                {
+                    "date": 1737131701028,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,5 @@\n+import React from \"react\";\n+import  {Picker} from '@react-native-picker/picker';\n+\n+\n+export \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1737131708748,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,5 @@\n+import React from \"react\";\n+import  {Picker} from '@react-native-picker/picker';\n+\n+\n+export default Picker\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1737131714024,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,5 @@\n+import React from \"react\";\n+import  {Picker} from '@react-native-picker/picker';\n+\n+\n+export default PickerLine\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1737131723227,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,7 @@\n+import React from \"react\";\n+import  {Picker} from '@react-native-picker/picker';\n+\n+\n+export default PickerLine(){\n+  return\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1737131731928,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,9 @@\n+import React from \"react\";\n+import  {Picker} from '@react-native-picker/picker';\n+\n+\n+export default PickerLine(){\n+  return(\n+    <\n+  )\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1737131739178,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,9 @@\n+import React from \"react\";\n+import  {Picker} from '@react-native-picker/picker';\n+\n+\n+export default PickerLine(){\n+  return(\n+    <Picker></Picker>\n+  )\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1737131755139,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,16 @@\n+import React from \"react\";\n+import  {Picker} from '@react-native-picker/picker';\n+\n+\n+export default PickerLine(){\n+  return(\n+    <Picker\n+      selectedValue={selectedLanguage}\n+      onValueChange={(itemValue, itemIndex) =>\n+        setSelectedLanguage(itemValue)\n+      }>\n+      <Picker.Item label=\"Java\" value=\"java\" />\n+      <Picker.Item label=\"JavaScript\" value=\"js\" />\n+    </Picker>\n+  )\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1737131776017,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,17 @@\n+import React from \"react\";\n+import  {Picker} from '@react-native-picker/picker';\n+\n+\n+export default function App() {\n+  return (\n+    <SafeAreaView style={styles.container}>\n+      <View>\n+        <Text>Hora extra</Text>\n+        <Text>Organization</Text>\n+      </View>\n+      <View>\n+        <Text>Linha: </Text>\n+      </View>\n+    </SafeAreaView>\n+  );\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1737131785098,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,26 +1,9 @@\n import React from \"react\";\n import  {Picker} from '@react-native-picker/picker';\n \n \n-export default function App() {\n-  return (\n-    <SafeAreaView style={styles.container}>\n-      <View>\n-        <Text>Hora extra</Text>\n-        <Text>Organization</Text>\n-      </View>\n-      <View>\n-        <Text>Linha: </Text>\n-      </View>\n-    </SafeAreaView>\n-  );\n-}\n-import React from \"react\";\n-import  {Picker} from '@react-native-picker/picker';\n-\n-\n-export default PickerLine(){\n+export default function PickerLine(){\n   return(\n     <Picker\n       selectedValue={selectedLanguage}\n       onValueChange={(itemValue, itemIndex) =>\n@@ -29,53 +12,5 @@\n       <Picker.Item label=\"Java\" value=\"java\" />\n       <Picker.Item label=\"JavaScript\" value=\"js\" />\n     </Picker>\n   )\n-}\n-import React from \"react\";\n-import  {Picker} from '@react-native-picker/picker';\n-\n-\n-export default PickerLine(){\n-  return(\n-    <Picker></Picker>\n-  )\n-}\n-import React from \"react\";\n-import  {Picker} from '@react-native-picker/picker';\n-\n-\n-export default PickerLine(){\n-  return(\n-    <\n-  )\n-}\n-import React from \"react\";\n-import  {Picker} from '@react-native-picker/picker';\n-\n-\n-export default PickerLine(){\n-  return\n-}\n-import React from \"react\";\n-import  {Picker} from '@react-native-picker/picker';\n-\n-\n-export default PickerLine\n-import React from \"react\";\n-import  {Picker} from '@react-native-picker/picker';\n-\n-\n-export default Picker\n-import React from \"react\";\n-import  {Picker} from '@react-native-picker/picker';\n-\n-\n-export \n-import React from \"react\";\n-import  {Picker} from '@react-native-picker/picker';\n-\n-\n-import React from \"react\";\n-import  {Picker} from '@react-native-picker/picker';\n-import React from \"react\";\n-import  {Picker} from '@'\n\\ No newline at end of file\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1737131797445,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,10 @@\n import  {Picker} from '@react-native-picker/picker';\n \n \n export default function PickerLine(){\n+\n+  \n   return(\n     <Picker\n       selectedValue={selectedLanguage}\n       onValueChange={(itemValue, itemIndex) =>\n"
+                },
+                {
+                    "date": 1737131805295,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,18 @@\n+import React from \"react\";\n+import  {Picker} from '@react-native-picker/picker';\n+\n+\n+export default function PickerLine(){\n+\n+  const []\n+  return(\n+    <Picker\n+      selectedValue={selectedLanguage}\n+      onValueChange={(itemValue, itemIndex) =>\n+        setSelectedLanguage(itemValue)\n+      }>\n+      <Picker.Item label=\"Java\" value=\"java\" />\n+      <Picker.Item label=\"JavaScript\" value=\"js\" />\n+    </Picker>\n+  )\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1737131811250,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,18 @@\n+import React from \"react\";\n+import  {Picker} from '@react-native-picker/picker';\n+\n+\n+export default function PickerLine(){\n+\n+  const [line, setline]\n+  return(\n+    <Picker\n+      selectedValue={selectedLanguage}\n+      onValueChange={(itemValue, itemIndex) =>\n+        setSelectedLanguage(itemValue)\n+      }>\n+      <Picker.Item label=\"Java\" value=\"java\" />\n+      <Picker.Item label=\"JavaScript\" value=\"js\" />\n+    </Picker>\n+  )\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1737131816949,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,18 @@\n+import React from \"react\";\n+import  {Picker} from '@react-native-picker/picker';\n+\n+\n+export default function PickerLine(){\n+\n+  const [line, setline]= use\n+  return(\n+    <Picker\n+      selectedValue={selectedLanguage}\n+      onValueChange={(itemValue, itemIndex) =>\n+        setSelectedLanguage(itemValue)\n+      }>\n+      <Picker.Item label=\"Java\" value=\"java\" />\n+      <Picker.Item label=\"JavaScript\" value=\"js\" />\n+    </Picker>\n+  )\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1737131826358,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,18 @@\n+import React, { useState } from \"react\";\n+import  {Picker} from '@react-native-picker/picker';\n+\n+\n+export default function PickerLine(){\n+\n+  const [line, setline]= useState();\n+  return(\n+    <Picker\n+      selectedValue={selectedLanguage}\n+      onValueChange={(itemValue, itemIndex) =>\n+        setSelectedLanguage(itemValue)\n+      }>\n+      <Picker.Item label=\"Java\" value=\"java\" />\n+      <Picker.Item label=\"JavaScript\" value=\"js\" />\n+    </Picker>\n+  )\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1737131838271,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,18 @@\n+import React, { useState } from \"react\";\n+import  {Picker} from '@react-native-picker/picker';\n+\n+\n+export default function PickerLine(){\n+\n+  const [line, setine]= useState(\"\");\n+  return(\n+    <Picker\n+      selectedValue={selectedLanguage}\n+      onValueChange={(itemValue, itemIndex) =>\n+        setSelectedLanguage(itemValue)\n+      }>\n+      <Picker.Item label=\"Java\" value=\"java\" />\n+      <Picker.Item label=\"JavaScript\" value=\"js\" />\n+    </Picker>\n+  )\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1737131859486,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,12 +4,12 @@\n \n export default function PickerLine(){\n \n   const [line, setLine]= useState(\"\");\n-  \n+\n   return(\n     <Picker\n-      selectedValue={selectedLanguage}\n+      selectedValue={line}\n       onValueChange={(itemValue, itemIndex) =>\n         setSelectedLanguage(itemValue)\n       }>\n       <Picker.Item label=\"Java\" value=\"java\" />\n"
+                },
+                {
+                    "date": 1737131875164,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,19 @@\n+import React, { useState } from \"react\";\n+import  {Picker} from '@react-native-picker/picker';\n+\n+\n+export default function PickerLine(){\n+\n+  const [line, setLine]= useState(\"\");\n+\n+  return(\n+    <Picker\n+      selectedValue={line}\n+      onValueChange={(itemValue, itemIndex) =>\n+        setSelectedLanguage(itemValue)\n+      }>\n+      <Picker.Item label=\"\" value=\"java\" />\n+      <Picker.Item label=\"JavaScript\" value=\"js\" />\n+    </Picker>\n+  )\n+}\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1737131644343,
+            "name": "Commit-0",
+            "content": "i"
+        }
+    ]
+}
