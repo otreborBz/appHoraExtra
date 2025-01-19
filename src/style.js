@@ -10,8 +10,16 @@ const styles = StyleSheet.create({
     paddingBottom: 16,
   },
   header: {
+    flexDirection: 'row',
     alignItems: 'center',
-    marginBottom: 20,
+    
+  },
+  image:{
+    width: 150,
+    height: 150,
+  },
+  text:{
+    alignItems: 'center',
   },
   title: {
     fontSize: 24,

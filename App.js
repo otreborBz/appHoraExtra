@@ -5,6 +5,7 @@ import {
   TouchableOpacity,
   View,
   ScrollView,
+  Image
 } from 'react-native';
 import styles from './src/style.js';
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
@@ -73,8 +74,11 @@ export default function App() {
       <SafeAreaView style={styles.container}>
         <ScrollView contentContainerStyle={styles.scrollContent}>
           <View style={styles.header}>
-            <Text style={styles.title}>Hora extra</Text>
-            <Text style={styles.subtitle}>Organization</Text>
+            <Image source={require('./src/assets/logo.png')} style={styles.image}/>
+            <View style={styles.text}>
+              <Text style={styles.title}>Hora extra</Text>
+              <Text style={styles.subtitle}>Organization</Text>
+            </View>
           </View>
 
           <View style={styles.pickerRow}>
