@@ -80,7 +80,7 @@ const styles = StyleSheet.create({
   buttonsContainer: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    marginTop: 20,
+    marginTop: 10,
   },
   button: {
     flex: 1,
@@ -93,6 +93,15 @@ const styles = StyleSheet.create({
   buttonText: {
     color: '#fff',
     fontSize: 16,
+    fontWeight: 'bold',
+  },
+  footer:{
+    alignItems: 'center',
+    paddingBottom: 5,
+    paddingTop: 6,
+  },
+  footerText: {
+    fontSize: 12,
     fontWeight: 'bold',
   },
 });

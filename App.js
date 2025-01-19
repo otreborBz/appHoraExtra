@@ -72,14 +72,15 @@ export default function App() {
   return (
     <SafeAreaProvider>
       <SafeAreaView style={styles.container}>
-        <ScrollView contentContainerStyle={styles.scrollContent}>
-          <View style={styles.header}>
-            <Image source={require('./src/assets/logo.png')} style={styles.image}/>
-            <View style={styles.text}>
-              <Text style={styles.title}>Hora extra</Text>
-              <Text style={styles.subtitle}>Organization</Text>
-            </View>
+        <View style={styles.header}>
+          <Image source={require('./src/assets/logo.png')} style={styles.image} />
+          <View style={styles.text}>
+            <Text style={styles.title}>Hora extra</Text>
+            <Text style={styles.subtitle}>Organization</Text>
           </View>
+        </View>
+        <ScrollView contentContainerStyle={styles.scrollContent}>
+          
 
           <View style={styles.pickerRow}>
             <Text style={styles.label}>Linha:</Text>
@@ -131,6 +132,7 @@ export default function App() {
             ))}
           </View>
 
+          
           <View style={styles.buttonsContainer}>
             <TouchableOpacity style={styles.button} onPress={clear}>
               <Text style={styles.buttonText}>Limpar</Text>
@@ -139,7 +141,14 @@ export default function App() {
               <Text style={styles.buttonText}>Exportar PDF</Text>
             </TouchableOpacity>
           </View>
+          <View style={styles.footer}>
+            <Text style={styles.footerText}>Code BR | Roberto de Carvalho</Text>
+          </View>
+          
         </ScrollView>
+
+        
+        
       </SafeAreaView>
     </SafeAreaProvider>
   );
