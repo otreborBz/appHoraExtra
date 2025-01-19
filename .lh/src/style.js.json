@@ -1,0 +1,50 @@
+{
+    "sourceFile": "src/style.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 8,
+            "patches": [
+                {
+                    "date": 1737251383906,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1737251393151,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n-import\n\\ No newline at end of file\n+import \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1737251399075,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,1 @@\n+import { She}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1737251405789,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,1 @@\n-import { She}\n-import \n\\ No newline at end of file\n+import { stye}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1737251411775,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,2 @@\n+import { StyleSheet } from \"react-native\";\n+\n"
+                },
+                {
+                    "date": 1737251433650,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,75 @@\n import { StyleSheet } from \"react-native\";\n \n-import { stye}\n\\ No newline at end of file\n+const styles = StyleSheet.create({\n+  container: {\n+    flex: 1,\n+    backgroundColor: '#fff',\n+    paddingHorizontal: 16,\n+  },\n+  scrollContent: {\n+    paddingBottom: 16,\n+  },\n+  header: {\n+    alignItems: 'center',\n+    marginBottom: 20,\n+  },\n+  title: {\n+    fontSize: 24,\n+    fontWeight: 'bold',\n+  },\n+  subtitle: {\n+    fontSize: 16,\n+    color: 'gray',\n+  },\n+  pickerRow: {\n+    flexDirection: 'row',\n+    alignItems: 'center',\n+    marginBottom: 20,\n+  },\n+  label: {\n+    fontSize: 16,\n+    marginRight: 8,\n+  },\n+  picker: {\n+    width: '30%',\n+    height: 50,\n+    borderWidth: 1,\n+    borderColor: '#ccc',\n+    borderRadius: 8,\n+  },\n+  inputsContainer: {\n+    marginBottom: 20,\n+  },\n+  inputGroup: {\n+    marginBottom: 16,\n+  },\n+  input: {\n+    borderBottomWidth: 1,\n+    borderColor: '#ccc',\n+    borderRadius: 8,\n+    padding: 8,\n+    marginBottom: 4,\n+  },\n+  inputLabel: {\n+    fontSize: 14,\n+    color: '#555',\n+  },\n+  buttonsContainer: {\n+    flexDirection: 'row',\n+    justifyContent: 'space-between',\n+    marginTop: 20,\n+  },\n+  button: {\n+    flex: 1,\n+    backgroundColor: '#007bff',\n+    padding: 12,\n+    marginHorizontal: 8,\n+    borderRadius: 8,\n+    alignItems: 'center',\n+  },\n+  buttonText: {\n+    color: '#fff',\n+    fontSize: 16,\n+    fontWeight: 'bold',\n+  },\n+});\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1737251442750,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -71,5 +71,7 @@\n     color: '#fff',\n     fontSize: 16,\n     fontWeight: 'bold',\n   },\n-});\n\\ No newline at end of file\n+});\n+\n+export \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1737251449785,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -73,5 +73,5 @@\n     fontWeight: 'bold',\n   },\n });\n \n-export default \n\\ No newline at end of file\n+export default styles;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1737252515469,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,70 @@\n+import { StyleSheet } from 'react-native';\n+\n+const styles = StyleSheet.create({\n+  container: {\n+    flex: 1,\n+    backgroundColor: '#f5f5f5',\n+  },\n+  scrollContent: {\n+    padding: 16,\n+  },\n+  header: {\n+    marginBottom: 24,\n+  },\n+  title: {\n+    fontSize: 24,\n+    fontWeight: 'bold',\n+    textAlign: 'center',\n+  },\n+  subtitle: {\n+    fontSize: 16,\n+    textAlign: 'center',\n+    color: '#555',\n+  },\n+  pickerRow: {\n+    marginBottom: 16,\n+  },\n+  label: {\n+    fontSize: 16,\n+    marginBottom: 8,\n+  },\n+  picker: {\n+    backgroundColor: '#fff',\n+    borderRadius: 8,\n+  },\n+  inputsContainer: {\n+    marginBottom: 24,\n+  },\n+  inputGroup: {\n+    marginBottom: 16,\n+  },\n+  inputLabel: {\n+    fontSize: 14,\n+    marginBottom: 4,\n+  },\n+  input: {\n+    borderWidth: 1,\n+    borderColor: '#ccc',\n+    borderRadius: 8,\n+    padding: 8,\n+    backgroundColor: '#fff',\n+  },\n+  buttonsContainer: {\n+    flexDirection: 'row',\n+    justifyContent: 'space-between',\n+  },\n+  button: {\n+    flex: 1,\n+    marginHorizontal: 8,\n+    backgroundColor: '#007bff',\n+    padding: 12,\n+    borderRadius: 8,\n+  },\n+  buttonText: {\n+    textAlign: 'center',\n+    color: '#fff',\n+    fontWeight: 'bold',\n+  },\n+});\n+\n+export default styles;\n"
+                }
+            ],
+            "date": 1737251383906,
+            "name": "Commit-0",
+            "content": "import"
+        }
+    ]
+}

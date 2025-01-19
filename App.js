@@ -1,17 +1,27 @@
 import React, { useState } from 'react';
 import {
-  StyleSheet,
   Text,
   TextInput,
   TouchableOpacity,
   View,
   ScrollView,
+  Platform,
 } from 'react-native';
+import styles from './src/style.js'
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 import { Picker } from '@react-native-picker/picker';
+import DateTimePicker from '@react-native-community/datetimepicker';
 
 export default function App() {
   const [line, setLine] = useState();
+  const [date, setDate] = useState(new Date());
+  const [showDatePicker, setShowDatePicker] = useState(false);
+
+  const onDateChange = (event, selectedDate) => {
+    const currentDate = selectedDate || date;
+    setShowDatePicker(Platform.OS === 'ios');
+    setDate(currentDate);
+  };
 
   return (
     <SafeAreaProvider>
@@ -23,7 +33,7 @@ export default function App() {
           </View>
 
           <View style={styles.pickerRow}>
-            <Text style={styles.label}>Selecione a Linha:</Text>
+            <Text style={styles.label}>Linha:</Text>
             <Picker
               selectedValue={line}
               onValueChange={(itemValue) => setLine(itemValue)}
@@ -35,6 +45,26 @@ export default function App() {
               <Picker.Item label="K" value="K" />
               <Picker.Item label="N" value="N" />
             </Picker>
+
+
+              <Text style={styles.label}>Data:</Text>
+              <TouchableOpacity
+                style={styles.dateButton}
+                onPress={() => setShowDatePicker(true)}
+              >
+                <Text style={styles.dateButtonText}>
+                  {date.toLocaleDateString('pt-BR')}
+                </Text>
+              </TouchableOpacity>
+              {showDatePicker && (
+                <DateTimePicker
+                  value={date}
+                  mode="date"
+                  display="default"
+                  onChange={onDateChange}
+                />
+              )}
+            
           </View>
 
           <View style={styles.inputsContainer}>
@@ -62,7 +92,6 @@ export default function App() {
                   placeholder="Nome do colaborador"
                   style={styles.input}
                 />
-               
               </View>
             ))}
           </View>
@@ -81,76 +110,4 @@ export default function App() {
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    paddingHorizontal: 16,
-  },
-  scrollContent: {
-    paddingBottom: 16,
-  },
-  header: {
-    alignItems: 'center',
-    marginBottom: 20,
-  },
-  title: {
-    fontSize: 24,
-    fontWeight: 'bold',
-  },
-  subtitle: {
-    fontSize: 16,
-    color: 'gray',
-  },
-  pickerRow: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    marginBottom: 20,
-  },
-  label: {
-    fontSize: 16,
-    marginRight: 8,
-  },
-  picker: {
-    width: '30%',
-    height: 50,
-    borderWidth: 1,
-    borderColor: '#ccc',
-    borderRadius: 8,
-  },
-  inputsContainer: {
-    marginBottom: 20,
-  },
-  inputGroup: {
-    marginBottom: 16,
-  },
-  input: {
-    borderBottomWidth: 1,
-    borderColor: '#ccc',
-    borderRadius: 8,
-    padding: 8,
-    marginBottom: 4,
-  },
-  inputLabel: {
-    fontSize: 14,
-    color: '#555',
-  },
-  buttonsContainer: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    marginTop: 20,
-  },
-  button: {
-    flex: 1,
-    backgroundColor: '#007bff',
-    padding: 12,
-    marginHorizontal: 8,
-    borderRadius: 8,
-    alignItems: 'center',
-  },
-  buttonText: {
-    color: '#fff',
-    fontSize: 16,
-    fontWeight: 'bold',
-  },
-});
+
