@@ -67,6 +67,7 @@ const styles = StyleSheet.create({
   inputLabel: {
     fontSize: 14,
     color: '#555',
+    fontWeight: 'bold',
   },
   buttonsContainer: {
     flexDirection: 'row',
