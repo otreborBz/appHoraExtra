@@ -9,7 +9,11 @@ import generatePDF from './src/pdf';
 export default function App() {
   const [line, setLine] = useState('');
   const [date, setDate] = useState(new Date());
+  const [entryTime, setEntryTime] = useState(new Date());
+  const [exitTime, setExitTime] = useState(new Date());
   const [showDatePicker, setShowDatePicker] = useState(false);
+  const [showEntryTimePicker, setShowEntryTimePicker] = useState(false);
+  const [showExitTimePicker, setShowExitTimePicker] = useState(false);
   const [formData, setFormData] = useState({
     'Isoladora de ranhura 1': '',
     'Isoladora de ranhura 2': '',
@@ -30,14 +34,25 @@ export default function App() {
   });
 
   const onDateChange = (event, selectedDate) => {
-    const currentDate = selectedDate || date;
     setShowDatePicker(false);
-    setDate(currentDate);
+    if (selectedDate) setDate(selectedDate);
+  };
+
+  const onEntryTimeChange = (event, selectedTime) => {
+    setShowEntryTimePicker(false);
+    if (selectedTime) setEntryTime(selectedTime);
+  };
+
+  const onExitTimeChange = (event, selectedTime) => {
+    setShowExitTimePicker(false);
+    if (selectedTime) setExitTime(selectedTime);
   };
 
   const clear = () => {
     setLine('');
     setDate(new Date());
+    setEntryTime(new Date());
+    setExitTime(new Date());
     setFormData({
       'Isoladora de ranhura 1': '',
       'Isoladora de ranhura 2': '',
@@ -59,7 +74,7 @@ export default function App() {
   };
 
   const handleGeneratePDF = async () => {
-    await generatePDF(line, date, formData); 
+    await generatePDF(line, date, entryTime, exitTime, formData);
   };
 
   return (
@@ -72,16 +87,11 @@ export default function App() {
             <Text style={styles.subtitle}>Organization</Text>
           </View>
         </View>
+        
         <ScrollView contentContainerStyle={styles.scrollContent}>
-          
-
-          <View style={styles.pickerRow}>
+          <View style={styles.pickerContainer}>
             <Text style={styles.label}>Linha:</Text>
-            <Picker
-              selectedValue={line}
-              onValueChange={(itemValue) => setLine(itemValue)}
-              style={styles.picker}
-            >
+            <Picker selectedValue={line} onValueChange={(itemValue) => setLine(itemValue)} style={styles.picker}>
               <Picker.Item label="Selecione uma linha" value="" />
               <Picker.Item label="G" value="G" />
               <Picker.Item label="H" value="H" />
@@ -89,23 +99,36 @@ export default function App() {
               <Picker.Item label="K" value="K" />
               <Picker.Item label="N" value="N" />
             </Picker>
+          </View>
 
-            <Text style={styles.label}>Data:</Text>
-            <TouchableOpacity
-              style={styles.dateButton}
-              onPress={() => setShowDatePicker(true)}
-            >
+          <Text style={styles.label}>Data:</Text>
+          <TouchableOpacity style={styles.dateButton} onPress={() => setShowDatePicker(true)}>
+            <Text style={styles.dateButtonText}>{date.toLocaleDateString('pt-BR')}</Text>
+          </TouchableOpacity>
+          
+          {showDatePicker && (
+            <DateTimePicker value={date} mode="date" display="default" onChange={onDateChange} />
+          )}
+
+          <View style={styles.dateTimeRow}>
+            <Text style={styles.label}>Entrada:</Text>
+            <TouchableOpacity style={styles.dateButton} onPress={() => setShowEntryTimePicker(true)}>
               <Text style={styles.dateButtonText}>
-                {date.toLocaleDateString('pt-BR')}
+                {entryTime.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' })}
               </Text>
             </TouchableOpacity>
-            {showDatePicker && (
-              <DateTimePicker
-                value={date}
-                mode="date"
-                display="default"
-                onChange={onDateChange}
-              />
+            {showEntryTimePicker && (
+              <DateTimePicker value={entryTime} mode="time" display="default" onChange={onEntryTimeChange} />
+            )}
+
+            <Text style={styles.label}>Saída:</Text>
+            <TouchableOpacity style={styles.dateButton} onPress={() => setShowExitTimePicker(true)}>
+              <Text style={styles.dateButtonText}>
+                {exitTime.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' })}
+              </Text>
+            </TouchableOpacity>
+            {showExitTimePicker && (
+              <DateTimePicker value={exitTime} mode="time" display="default" onChange={onExitTimeChange} />
             )}
           </View>
 
@@ -117,15 +140,12 @@ export default function App() {
                   placeholder="Nome do colaborador"
                   style={styles.input}
                   value={formData[label]}
-                  onChangeText={(text) =>
-                    setFormData({ ...formData, [label]: text })
-                  }
+                  onChangeText={(text) => setFormData({ ...formData, [label]: text })}
                 />
               </View>
             ))}
           </View>
 
-          
           <View style={styles.buttonsContainer}>
             <TouchableOpacity style={styles.button} onPress={clear}>
               <Text style={styles.buttonText}>Limpar</Text>
@@ -134,15 +154,14 @@ export default function App() {
               <Text style={styles.buttonText}>Exportar PDF</Text>
             </TouchableOpacity>
           </View>
+
           <View style={styles.footer}>
             <Text style={styles.footerText}>Code BR | Roberto de Carvalho</Text>
           </View>
-          
         </ScrollView>
-
-        
-        
       </SafeAreaView>
     </SafeAreaProvider>
   );
 }
+
+

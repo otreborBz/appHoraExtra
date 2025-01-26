@@ -1,10 +1,11 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    paddingHorizontal: 16,
+    paddingHorizontal: 20,
+    paddingTop: 20,
   },
   scrollContent: {
     paddingBottom: 16,
@@ -12,98 +13,108 @@ const styles = StyleSheet.create({
   header: {
     flexDirection: 'row',
     alignItems: 'center',
-    
+    marginBottom: 20,
+    paddingHorizontal: 10,
   },
-  image:{
-    width: 150,
-    height: 150,
+  image: {
+    width: 120,
+    height: 120,
+    resizeMode: 'contain',
   },
-  text:{
+  text: {
     alignItems: 'center',
+    marginLeft: 15,
   },
   title: {
-    fontSize: 24,
+    fontSize: 26,
     fontWeight: 'bold',
+    color: '#333',
   },
   subtitle: {
-    fontSize: 16,
-    color: 'gray',
+    fontSize: 18,
+    color: '#666',
   },
-  pickerRow: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-around',
+  pickerContainer: {
     marginBottom: 20,
+    marginHorizontal: 10,
+  },
+  dateTimeRow: {
+    flexDirection: 'column', // Alinha os botões verticalmente
+    justifyContent: 'center', // Centraliza os itens na coluna
+    marginBottom: 20,
+    width: '100%',
   },
   label: {
     fontSize: 16,
     marginRight: 8,
+    fontWeight: '600',
   },
   picker: {
-    width: '30%',
+    width: '100%',
     height: 50,
     borderWidth: 1,
-    borderColor: '#ccc',
+    borderColor: '#ddd',
     borderRadius: 8,
-  },
-  datePickerContainer: {
-    marginBottom: 20,
+    backgroundColor: '#f9f9f9',
   },
   dateButton: {
     padding: 12,
-    backgroundColor: '#eee',
+    backgroundColor: '#f1f1f1',
     borderRadius: 8,
     alignItems: 'center',
+    minWidth: 140, // Tamanho mínimo para garantir que o conteúdo caiba
+    marginBottom: 10, // Espaçamento entre os botões
   },
   dateButtonText: {
     fontSize: 16,
     color: '#333',
-  },
-  inputsContainer: {
-    marginBottom: 20,
   },
   inputGroup: {
     marginBottom: 16,
   },
   input: {
     borderBottomWidth: 1,
-    borderColor: '#ccc',
+    borderColor: '#ddd',
     borderRadius: 8,
-    padding: 8,
-    marginBottom: 4,
+    padding: 10,
+    fontSize: 16,
   },
   inputLabel: {
     fontSize: 14,
-    color: '#555',
     fontWeight: 'bold',
+    marginBottom: 6,
   },
   buttonsContainer: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    marginTop: 10,
+    marginTop: 20,
   },
   button: {
     flex: 1,
     backgroundColor: '#007bff',
-    padding: 12,
+    paddingVertical: 14,
     marginHorizontal: 8,
     borderRadius: 8,
     alignItems: 'center',
+    justifyContent: 'center',
+    elevation: 3, // Somente Android
   },
   buttonText: {
     color: '#fff',
     fontSize: 16,
     fontWeight: 'bold',
   },
-  footer:{
+  footer: {
     alignItems: 'center',
-    paddingBottom: 5,
-    paddingTop: 6,
+    paddingVertical: 15,
   },
   footerText: {
-    fontSize: 12,
-    fontWeight: 'bold',
+    fontSize: 14,
+    fontWeight: '600',
+    color: '#777',
   },
 });
 
 export default styles;
+
+
