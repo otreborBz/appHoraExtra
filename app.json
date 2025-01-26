@@ -1,14 +1,14 @@
 {
   "expo": {
-    "name": "Hora Extra",
-    "slug": "Hora Extra Organization",
+    "name": "overtime",
+    "slug": "overtime",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./src/assets/logo.png",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
     "splash": {
-      "image": "./assets/splash-icon.png",
+      "image": "./src/assets/logo.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -20,10 +20,15 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.otrebor.horaExtraorganization"
+      "package": "com.otrebor.overtime"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "ed290bfe-d0eb-41fc-947f-e0a139ce2d2b"
+      }
     }
   }
 }

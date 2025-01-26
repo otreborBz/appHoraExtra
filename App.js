@@ -1,17 +1,10 @@
 import React, { useState } from 'react';
-import {
-  Text,
-  TextInput,
-  TouchableOpacity,
-  View,
-  ScrollView,
-  Image
-} from 'react-native';
+import { Text, TextInput, TouchableOpacity, View, ScrollView, Image } from 'react-native';
 import styles from './src/style.js';
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 import { Picker } from '@react-native-picker/picker';
 import DateTimePicker from '@react-native-community/datetimepicker';
-import generatePDF from './src/pdf';  // Importando a função corretamente
+import generatePDF from './src/pdf';
 
 export default function App() {
   const [line, setLine] = useState('');
