@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
   header: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginBottom: 20,
+    marginBottom: 10,
     paddingHorizontal: 10,
   },
   image: {
@@ -26,23 +26,28 @@ const styles = StyleSheet.create({
     marginLeft: 15,
   },
   title: {
-    fontSize: 26,
+    fontSize: 18,
     fontWeight: 'bold',
     color: '#333',
   },
   subtitle: {
-    fontSize: 18,
+    fontSize: 16,
     color: '#666',
   },
   pickerContainer: {
     marginBottom: 20,
-    marginHorizontal: 10,
   },
   dateTimeRow: {
-    flexDirection: 'column', // Alinha os botões verticalmente
-    justifyContent: 'center', // Centraliza os itens na coluna
+    flexDirection: 'row',
+    justifyContent: 'space-between',
     marginBottom: 20,
     width: '100%',
+  },
+  dateTimeBloco:{
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    
   },
   label: {
     fontSize: 16,
@@ -62,59 +67,86 @@ const styles = StyleSheet.create({
     backgroundColor: '#f1f1f1',
     borderRadius: 8,
     alignItems: 'center',
-    minWidth: 140, // Tamanho mínimo para garantir que o conteúdo caiba
-    marginBottom: 10, // Espaçamento entre os botões
+    minWidth: 140,
+    marginBottom: 10,
   },
   dateButtonText: {
     fontSize: 16,
     color: '#333',
   },
   inputGroup: {
-    marginBottom: 16,
-  },
-  input: {
-    borderBottomWidth: 1,
-    borderColor: '#ddd',
-    borderRadius: 8,
-    padding: 10,
-    fontSize: 16,
+    marginBottom: 20,
   },
   inputLabel: {
-    fontSize: 14,
-    fontWeight: 'bold',
-    marginBottom: 6,
+    fontSize: 16,
+    marginBottom: 8,
+    fontWeight: '600',
+  },
+  input: {
+    height: 45,
+    borderWidth: 1,
+    borderColor: '#ddd',
+    borderRadius: 8,
+    paddingLeft: 10,
   },
   buttonsContainer: {
+    marginTop: 10,
     flexDirection: 'row',
     justifyContent: 'space-between',
-    marginTop: 20,
   },
   button: {
-    flex: 1,
-    backgroundColor: '#007bff',
-    paddingVertical: 14,
-    marginHorizontal: 8,
+    backgroundColor: '#007BFF',
+    paddingVertical: 12,
+    paddingHorizontal: 40,
     borderRadius: 8,
+    marginTop: 10,
+  },
+  buttonModal: {
     alignItems: 'center',
-    justifyContent: 'center',
-    elevation: 3, // Somente Android
+    backgroundColor: '#007BFF',
+    paddingVertical: 12,
+    paddingHorizontal: 40,
+    borderRadius: 8,
+    marginTop: 10,
   },
   buttonText: {
+    fontSize: 18,
     color: '#fff',
-    fontSize: 16,
-    fontWeight: 'bold',
   },
   footer: {
     alignItems: 'center',
-    paddingVertical: 15,
+    marginTop: 40,
   },
   footerText: {
     fontSize: 14,
-    fontWeight: '600',
-    color: '#777',
+    color: '#666',
+  },
+
+  // Modal Styles
+  modalBackground: {
+    flex: 1,
+    justifyContent: 'flex-end',
+    alignItems: 'center',
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+  },
+  modalContainer: {
+    width: '90%',
+    backgroundColor: 'white',
+    padding: 20,
+    borderRadius: 8,
+    marginBottom: 20,
+  },
+  modalTitle: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    marginBottom: 10,
+  },
+  suggestion: {
+    fontSize: 16,
+    padding: 10,
+    borderBottomWidth: 1,
+    borderBottomColor: '#ddd',
   },
 });
 
 export default styles;
-
-
