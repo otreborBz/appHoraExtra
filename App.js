@@ -60,7 +60,7 @@ export default function App() {
   const onSelectEmployee = (name, id) => {
     setFormData({
       ...formData,
-      [activeInput]: `${name} (ID: ${id})`, // Adiciona o nome e ID no campo
+      [activeInput]: `${name} (RE: ${id})`, // Adiciona o nome e ID no campo
     });
     setQuery(''); // Limpa a pesquisa
     setFilteredEmployees([]); // Limpa sugestões

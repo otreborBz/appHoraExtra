@@ -1,35 +1,23 @@
 {
   "expo": {
-    "name": "overtime",
+    "name": "Overtime",
     "slug": "overtime",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./src/assets/logo.png",
-    "userInterfaceStyle": "light",
-    "newArchEnabled": true,
     "splash": {
       "image": "./src/assets/logo.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "ios": {
-      "supportsTablet": true
-    },
     "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      },
-      "package": "com.otrebor.overtime"
-    },
-    "web": {
-      "favicon": "./assets/favicon.png"
+      "package": "com.otrebor.overtime",
+      "permissions": []
     },
     "extra": {
       "eas": {
         "projectId": "ed290bfe-d0eb-41fc-947f-e0a139ce2d2b"
       }
-    },
-    "owner": "otrebor"
+    }
   }
 }
